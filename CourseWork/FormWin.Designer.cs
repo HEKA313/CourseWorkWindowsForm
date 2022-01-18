@@ -37,7 +37,6 @@
             this.labelHintsCount = new System.Windows.Forms.Label();
             this.labelBestTime = new System.Windows.Forms.Label();
             this.labelBestTimeCount = new System.Windows.Forms.Label();
-            this.buttonBestTime = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonNewGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -142,16 +141,6 @@
             this.labelBestTimeCount.TabIndex = 8;
             this.labelBestTimeCount.Text = "label1";
             // 
-            // buttonBestTime
-            // 
-            this.buttonBestTime.Location = new System.Drawing.Point(302, 219);
-            this.buttonBestTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonBestTime.Name = "buttonBestTime";
-            this.buttonBestTime.Size = new System.Drawing.Size(21, 25);
-            this.buttonBestTime.TabIndex = 9;
-            this.buttonBestTime.UseVisualStyleBackColor = true;
-            this.buttonBestTime.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonBestTime_MouseMove);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -167,7 +156,7 @@
             // 
             this.buttonNewGame.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNewGame.Location = new System.Drawing.Point(99, 353);
-            this.buttonNewGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNewGame.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNewGame.Name = "buttonNewGame";
             this.buttonNewGame.Size = new System.Drawing.Size(142, 51);
             this.buttonNewGame.TabIndex = 11;
@@ -179,10 +168,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 423);
+            this.ClientSize = new System.Drawing.Size(355, 423);
             this.Controls.Add(this.buttonNewGame);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonBestTime);
             this.Controls.Add(this.labelBestTimeCount);
             this.Controls.Add(this.labelBestTime);
             this.Controls.Add(this.labelHintsCount);
@@ -193,7 +181,7 @@
             this.Controls.Add(this.labelMoves);
             this.Controls.Add(this.labelWin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormWin";
             this.Text = "TableOfRecords";
             this.Load += new System.EventHandler(this.FormWin_Load);
@@ -213,7 +201,6 @@
         private System.Windows.Forms.Label labelHintsCount;
         private System.Windows.Forms.Label labelBestTime;
         private System.Windows.Forms.Label labelBestTimeCount;
-        private System.Windows.Forms.Button buttonBestTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonNewGame;
     }
