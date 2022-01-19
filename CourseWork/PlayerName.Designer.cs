@@ -49,27 +49,29 @@
             // 
             this.InputPlayerName.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InputPlayerName.Location = new System.Drawing.Point(14, 35);
-            this.InputPlayerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InputPlayerName.Margin = new System.Windows.Forms.Padding(2);
             this.InputPlayerName.Name = "InputPlayerName";
             this.InputPlayerName.Size = new System.Drawing.Size(282, 32);
             this.InputPlayerName.TabIndex = 13;
+            this.InputPlayerName.TextChanged += new System.EventHandler(this.InputPlayerName_TextChanged);
             // 
             // buttonPlayerNameCancel
             // 
             this.buttonPlayerNameCancel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPlayerNameCancel.Location = new System.Drawing.Point(107, 118);
-            this.buttonPlayerNameCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPlayerNameCancel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPlayerNameCancel.Name = "buttonPlayerNameCancel";
             this.buttonPlayerNameCancel.Size = new System.Drawing.Size(93, 41);
             this.buttonPlayerNameCancel.TabIndex = 14;
             this.buttonPlayerNameCancel.Text = "Отмена";
             this.buttonPlayerNameCancel.UseVisualStyleBackColor = true;
+            this.buttonPlayerNameCancel.Click += new System.EventHandler(this.buttonPlayerNameCancel_Click);
             // 
             // buttonPlayerNameOK
             // 
             this.buttonPlayerNameOK.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPlayerNameOK.Location = new System.Drawing.Point(206, 118);
-            this.buttonPlayerNameOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPlayerNameOK.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPlayerNameOK.Name = "buttonPlayerNameOK";
             this.buttonPlayerNameOK.Size = new System.Drawing.Size(88, 41);
             this.buttonPlayerNameOK.TabIndex = 0;
@@ -82,11 +84,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 169);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonPlayerNameOK);
             this.Controls.Add(this.buttonPlayerNameCancel);
             this.Controls.Add(this.InputPlayerName);
             this.Controls.Add(this.labelPlayerName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PlayerName";
             this.Text = "PlayerName";
             this.ResumeLayout(false);
