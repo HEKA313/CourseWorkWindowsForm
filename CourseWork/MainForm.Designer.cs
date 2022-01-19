@@ -44,6 +44,10 @@
             this.ToolStripMenuItem9x9 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem19х16 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem125х25 = new System.Windows.Forms.ToolStripMenuItem();
+            this.сложностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.простаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.средняяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сложнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,10 +67,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.labelPlayerName = new System.Windows.Forms.Label();
-            this.сложностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.простаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.средняяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сложнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonHint = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,14 +99,14 @@
             // новаяИграToolStripMenuItem
             // 
             this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
-            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.новаяИграToolStripMenuItem.Text = "Новая игра";
             this.новаяИграToolStripMenuItem.Click += new System.EventHandler(this.новаяИграToolStripMenuItem_Click);
             // 
             // таблицаРекордовToolStripMenuItem
             // 
             this.таблицаРекордовToolStripMenuItem.Name = "таблицаРекордовToolStripMenuItem";
-            this.таблицаРекордовToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.таблицаРекордовToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.таблицаРекордовToolStripMenuItem.Text = "Таблица рекордов";
             this.таблицаРекордовToolStripMenuItem.Click += new System.EventHandler(this.таблицаРекордовToolStripMenuItem_Click);
             // 
@@ -122,18 +123,19 @@
             this.количествоОшибокToolStripMenuItem.Name = "количествоОшибокToolStripMenuItem";
             this.количествоОшибокToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.количествоОшибокToolStripMenuItem.Text = "Количество ошибок";
+            this.количествоОшибокToolStripMenuItem.Click += new System.EventHandler(this.количествоОшибокToolStripMenuItem_Click);
             // 
             // сменитьИгрокаToolStripMenuItem
             // 
             this.сменитьИгрокаToolStripMenuItem.Name = "сменитьИгрокаToolStripMenuItem";
-            this.сменитьИгрокаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сменитьИгрокаToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.сменитьИгрокаToolStripMenuItem.Text = "Сменить игрока";
             this.сменитьИгрокаToolStripMenuItem.Click += new System.EventHandler(this.сменитьИгрокаToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem1
             // 
             this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.выходToolStripMenuItem1.Text = "Выход";
             // 
             // режимToolStripMenuItem1
@@ -173,22 +175,50 @@
             // 
             this.ToolStripMenuItem9x9.CheckOnClick = true;
             this.ToolStripMenuItem9x9.Name = "ToolStripMenuItem9x9";
-            this.ToolStripMenuItem9x9.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem9x9.Size = new System.Drawing.Size(103, 22);
             this.ToolStripMenuItem9x9.Text = "9х9";
             // 
             // ToolStripMenuItem19х16
             // 
             this.ToolStripMenuItem19х16.CheckOnClick = true;
             this.ToolStripMenuItem19х16.Name = "ToolStripMenuItem19х16";
-            this.ToolStripMenuItem19х16.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem19х16.Size = new System.Drawing.Size(103, 22);
             this.ToolStripMenuItem19х16.Text = "16х16";
             // 
             // ToolStripMenuItem125х25
             // 
             this.ToolStripMenuItem125х25.CheckOnClick = true;
             this.ToolStripMenuItem125х25.Name = "ToolStripMenuItem125х25";
-            this.ToolStripMenuItem125х25.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem125х25.Size = new System.Drawing.Size(103, 22);
             this.ToolStripMenuItem125х25.Text = "25х25";
+            // 
+            // сложностьToolStripMenuItem1
+            // 
+            this.сложностьToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.простаяToolStripMenuItem,
+            this.средняяToolStripMenuItem,
+            this.сложнаяToolStripMenuItem});
+            this.сложностьToolStripMenuItem1.Name = "сложностьToolStripMenuItem1";
+            this.сложностьToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
+            this.сложностьToolStripMenuItem1.Text = "Сложность";
+            // 
+            // простаяToolStripMenuItem
+            // 
+            this.простаяToolStripMenuItem.Name = "простаяToolStripMenuItem";
+            this.простаяToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.простаяToolStripMenuItem.Text = "Простая";
+            // 
+            // средняяToolStripMenuItem
+            // 
+            this.средняяToolStripMenuItem.Name = "средняяToolStripMenuItem";
+            this.средняяToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.средняяToolStripMenuItem.Text = "Средняя";
+            // 
+            // сложнаяToolStripMenuItem
+            // 
+            this.сложнаяToolStripMenuItem.Name = "сложнаяToolStripMenuItem";
+            this.сложнаяToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.сложнаяToolStripMenuItem.Text = "Сложная";
             // 
             // менюToolStripMenuItem
             // 
@@ -343,37 +373,22 @@
             this.labelPlayerName.Text = "label2";
             this.labelPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // сложностьToolStripMenuItem1
+            // buttonHint
             // 
-            this.сложностьToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.простаяToolStripMenuItem,
-            this.средняяToolStripMenuItem,
-            this.сложнаяToolStripMenuItem});
-            this.сложностьToolStripMenuItem1.Name = "сложностьToolStripMenuItem1";
-            this.сложностьToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
-            this.сложностьToolStripMenuItem1.Text = "Сложность";
-            // 
-            // простаяToolStripMenuItem
-            // 
-            this.простаяToolStripMenuItem.Name = "простаяToolStripMenuItem";
-            this.простаяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.простаяToolStripMenuItem.Text = "Простая";
-            // 
-            // средняяToolStripMenuItem
-            // 
-            this.средняяToolStripMenuItem.Name = "средняяToolStripMenuItem";
-            this.средняяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.средняяToolStripMenuItem.Text = "Средняя";
-            // 
-            // сложнаяToolStripMenuItem
-            // 
-            this.сложнаяToolStripMenuItem.Name = "сложнаяToolStripMenuItem";
-            this.сложнаяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.сложнаяToolStripMenuItem.Text = "Сложная";
+            this.buttonHint.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonHint.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonHint.Location = new System.Drawing.Point(700, 33);
+            this.buttonHint.Name = "buttonHint";
+            this.buttonHint.Size = new System.Drawing.Size(82, 30);
+            this.buttonHint.TabIndex = 7;
+            this.buttonHint.Text = "Подсказка";
+            this.buttonHint.UseVisualStyleBackColor = true;
+            this.buttonHint.Click += new System.EventHandler(this.buttonHint_Click);
             // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(882, 501);
+            this.Controls.Add(this.buttonHint);
             this.Controls.Add(this.labelPlayerName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -429,6 +444,7 @@
         private System.Windows.Forms.ToolStripMenuItem простаяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem средняяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сложнаяToolStripMenuItem;
+        private System.Windows.Forms.Button buttonHint;
     }
 }
 

@@ -16,7 +16,7 @@ namespace CourseWork
 		const int sizeButton = 50;
 		public static int[,] map = new int[n * n, n * n];
 		public static Button[,] buttons = new Button[n * n, n * n];
-		static DateTime date = DateTime.Now;
+		static DateTime date;
 		static List<int[]> history = new List<int[]>();
 		public static int moves;
 		static bool stopTimer = false;
@@ -33,7 +33,7 @@ namespace CourseWork
 		}
 
 		public void FillingInConstants()
-        {
+		{
 			if (простаяToolStripMenuItem.Checked) complexity = "Простая";
 			if (средняяToolStripMenuItem.Checked) complexity = "Средняя";
 			if (сложнаяToolStripMenuItem.Checked) complexity = "Сложная";
@@ -45,6 +45,7 @@ namespace CourseWork
 
 		public void GenerateMap()
 		{
+			date = DateTime.Now;
 			history.Clear();
 
 			for (int i = 0; i < n * n; i++)
@@ -472,14 +473,15 @@ namespace CourseWork
 		}
 
 		public void TableOfRecords()
-        {
+		{
 			stopTimer = true;
-			Form tableOfRecords = new TableOfRecords();
+			TableOfRecords tableOfRecords = new TableOfRecords();
 			tableOfRecords.ShowDialog();
+			tableOfRecords.Dispose();
 			stopTimer = false;
 			NewGame();
 			GenerateMap();
-        }
+		}
 
 		private void сменитьИгрокаToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -506,5 +508,33 @@ namespace CourseWork
 			NewGame();
 
 		}
-	}
+
+        private void buttonHint_Click(object sender, EventArgs e)
+        {
+			Random random = new Random();
+			var z = random.Next(1, 10);
+			var k = 0;
+			for (int i = 0; i < n * n; i++)
+			{
+				for (int j = 0; j < n * n; j++)
+				{
+					if (string.IsNullOrEmpty(buttons[i, j].Text))
+					{
+						k++;
+					}
+					if (k == z)
+					{
+						buttons[i, j].Text = map[i, j].ToString();
+						break;
+					}
+				}
+				if (k == z) break;
+			}
+		}
+
+        private void количествоОшибокToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

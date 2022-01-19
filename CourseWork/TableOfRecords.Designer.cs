@@ -130,16 +130,12 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TableOfRecords";
             this.Text = "TableOfRecords";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableOfRecords_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TableOfRecords_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn DifficultyGame;
@@ -147,5 +143,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn MovesCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn HintsCount;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
